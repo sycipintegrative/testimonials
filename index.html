@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Reviews</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #1a1a12;
+    color: #f0ece4;
+    padding: 64px 24px 80px;
+  }
+
+  .section-eyebrow {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #c8b86a;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 56px;
+    line-height: 1.2;
+    color: #f0ece4;
+  }
+  .section-title em { font-style: italic; color: #c8b86a; }
+
+  /* ── MASONRY GRID ── */
+  .grid {
+    columns: 3;
+    column-gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    break-inside: avoid;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+    padding: 28px 26px 24px;
+    margin-bottom: 20px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(200,184,106,0.25);
+  }
+
+  .stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 14px;
+  }
+  .star {
+    width: 14px; height: 14px;
+    fill: #c8b86a;
+  }
+
+  .quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: #e8e2d4;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .attribution {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(200,184,106,0.3), rgba(200,184,106,0.1));
+    border: 1px solid rgba(200,184,106,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #c8b86a;
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .attr-info {}
+  .attr-name {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f0ece4;
+  }
+  .attr-location {
+    font-size: 11.5px;
+    color: rgba(240,236,228,0.45);
+    margin-top: 1px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 780px) {
+    .grid { columns: 2; }
+    body { padding: 48px 16px 64px; }
+  }
+  @media (max-width: 480px) {
+    .grid { columns: 1; }
+    body { padding: 40px 14px 56px; }
+    .section-title { margin-bottom: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="section-eyebrow">What clients say</div>
+<h2 class="section-title">Client <em>Reviews</em></h2>
+
+<div class="grid">
+
+  <!-- ── TO ADD MORE: copy a .card block and change the content ── -->
+
+  <div class="card">
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="quote">"My coaching session went far beyond what I expected. I came carrying the weight of overwhelming symptoms, not even certain of any diagnosis — only deeply aware that something did not feel right. She met that uncertainty with such clarity and gentleness."</p>
+    <div class="attribution">
+      <div class="avatar">M</div>
+      <div class="attr-info">
+        <div class="attr-name">Michelle</div>
+        <div class="attr-location">Indiana</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="quote">"I finally found a coach that understands how my brain works. I always felt helpless with it, and now I'm very excited to continue."</p>
+    <div class="attribution">
+      <div class="avatar">J</div>
+      <div class="attr-info">
+        <div class="attr-name">Johann</div>
+        <div class="attr-location">Florida</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="quote">"I always had challenges meeting others' expectations and felt like I was constantly failing the people I love. But after discussing these said challenges with her I feel as I've found the pieces that fit the puzzle I've long been trying to solve."</p>
+    <div class="attribution">
+      <div class="avatar">M</div>
+      <div class="attr-info">
+        <div class="attr-name">Michelle</div>
+        <div class="attr-location">Seattle</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="quote">"Rinka brings such warmth, insight, and genuine care to her work — and she's wonderfully relatable too. My girls felt completely at ease with her, which made such a difference in their engagement. That in itself is a huge win. We wholeheartedly recommend Rinka's coaching."</p>
+    <div class="attribution">
+      <div class="avatar">N</div>
+      <div class="attr-info">
+        <div class="attr-name">Naomi</div>
+        <div class="attr-location">Brisbane</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="quote">"Before our session, I felt isolated in my challenges, but within minutes I had that 'wow, it's not just me' realization that made all the difference. Beyond the comfort, I was provided clear, realistic, and enjoyable actionable steps."</p>
+    <div class="attribution">
+      <div class="avatar">B</div>
+      <div class="attr-info">
+        <div class="attr-name">Brian</div>
+        <div class="attr-location">Manila</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stars">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <p class="quote">"My coaching session went far beyond what I expected. I came carrying the weight of overwhelming symptoms, not even certain of any diagnosis — only deeply aware that something did not feel right. She met that uncertainty with such clarity and gentleness."</p>
+    <div class="attribution">
+      <div class="avatar">J</div>
+      <div class="attr-info">
+        <div class="attr-name">Jerika</div>
+        <div class="attr-location">Manila</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /grid -->
+
+<script>
+(function () {
+  var parents = ['https://sycipintegrative.com', 'https://www.sycipintegrative.com'];
+  var lastHeight = 0;
+  function reportHeight() {
+    if (window.parent === window) return;
+    var height = Math.ceil(document.body.getBoundingClientRect().height);
+    if (height === lastHeight) return;
+    lastHeight = height;
+    parents.forEach(function (origin) {
+      window.parent.postMessage({type: 'sycip-testimonials-height', height: height}, origin);
+    });
+  }
+  new ResizeObserver(reportHeight).observe(document.body);
+  window.addEventListener('load', reportHeight);
+  window.addEventListener('message', function (event) {
+    if (event.source === window.parent && parents.indexOf(event.origin) !== -1 &&
+        event.data && event.data.type === 'sycip-testimonials-measure') {
+      lastHeight = 0;
+      reportHeight();
+    }
+  });
+  if (document.fonts) document.fonts.ready.then(reportHeight);
+  reportHeight();
+})();
+</script>
+</body>
+</html>
+
